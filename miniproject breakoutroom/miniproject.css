@@ -1,0 +1,443 @@
+#game_canv{
+    width:978px;
+    height:275px;
+    margin-left:125px;
+    z-index: 1;
+    background-image:url("roomscene2.png");
+    background-size: 100% 100%;
+    transition: background-image 1s ease-in-out;
+    border:3px solid green;
+}
+
+#item_canv{
+    background-color:black;
+    border-top:0px;
+    border-right: 3px solid green;
+    border-left: 3px solid green;
+    border-bottom: 3px solid green;
+    width:520px;
+    height:70px;
+    margin-left:320px;
+}
+
+#textdisplay{
+    background-color: black;
+    color:white;
+    font-family:Courier New;
+    width:900px;
+    height:100px;
+    border:3px solid orange;
+    margin-left:150px;
+    margin-top:20px;
+    padding-left:20px;
+}
+
+#text{
+    font-size:15px;
+}
+
+#cupboard{
+    width:47px;
+    height:45px;
+    position:absolute;
+    left:1000px;
+    top:475px;
+    opacity: 0;
+    z-index: 3;
+}
+#cupboard:hover{
+    cursor: url("mouse2.cur") 40 40, pointer;
+}
+
+#door{
+    width:80px;
+    height:120px;
+    position:absolute;
+    left:870px;
+    top:390px;
+    opacity: 0;
+}
+#door:hover{
+    cursor:url("mouse2.cur") 40 40, pointer;
+}
+
+#bed{
+    width:220px;
+    height:85px;
+    position:absolute;
+    left:320px;
+    top:435px;
+    opacity: 0;
+}
+#bed:hover{
+    cursor: url("mouse2.cur") 40 40, pointer;
+}
+
+#clock{
+    width:70px;
+    height:70px;
+    position: absolute;
+    top:325px;
+    left: 180px;
+    opacity: 0;
+}
+#clock:hover{
+    cursor:url("mouse2.cur") 40 40, pointer;
+}
+
+#blackboard{
+    width:265px;
+    height:78px;
+    position: absolute;
+    left:430px;
+   top:340px;
+    opacity: 0;
+}
+#blackboard:hover{
+    cursor:url("mouse2.cur") 40 40, pointer;
+}
+
+#window{
+    width: 60px;
+    height:60px;
+    position: absolute;
+    left:757px;
+    top:400px;
+    opacity: 0;
+}
+#window:hover{
+    cursor: url("mouse2.cur") 40 40, pointer;
+}
+
+#safe{
+    width:50px;
+    height:50px;
+    position:absolute;
+    visibility: hidden;
+    left:650px;
+    top:465px;
+    background-image: url("safe.png");
+    background-size: 100% 100%;
+    border:none;
+}
+#safe:hover{
+    cursor:url("mouse2.cur") 40 40, pointer;
+}
+
+@keyframes fade{
+    0%{opacity: 0;}
+    75% {opacity: 1;}
+}
+
+#scissor_icon{
+    width:70px;
+    height:70px;
+    position:absolute;
+    left: 350px;
+    visibility: hidden;
+    background-image: url('scissor_icon.png');
+    background-size: 100% 100%;
+    border:none;
+    opacity: 1;
+    transition:0.3s;
+    animation:none;
+
+}
+#scissor_icon:hover{
+    width: 65px;
+    height: 65px;
+    left: 352px;
+    margin-top:3px;
+    border: 2px solid white;
+    cursor: url("hammer.cur") 40 40, pointer;
+}
+#scissor_icon:focus{
+    outline: none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+#rope_icon{
+    width:70px;
+    height:70px;
+    position:absolute;
+    left:420px;
+    top:578px;
+    visibility: hidden;
+    background-image: url("rope_icon.png");
+    background-size: 100% 100%;
+    border:none;
+    transition:0.5s;
+    animation:none;
+}
+#rope_icon:hover{
+    width: 65px;
+    height: 65px;
+    left: 422px;
+    top:581px;
+    border: 2px solid white;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+#rope_icon:focus{
+    outline: none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+#screwdriver_icon{
+    width:70px;
+    height:70px;
+    position:absolute;
+    left:489px;
+    visibility: hidden;
+    background-image: url("screw_icon.png");
+    background-size: 100% 100%;
+    transition:0.5s;
+    border:none;
+}
+#screwdriver_icon:hover{
+    width: 65px;
+    height: 65px;
+    left: 491px;
+    margin-top:3px;
+    border: 2px solid white;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+#screwdriver_icon:focus{
+    outline: none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+#wrench_icon{
+    width:70px;
+    height:70px;
+    position:absolute;
+    left:559px;
+    visibility: hidden;
+    background-image:url("wrench_icon.png");
+    background-size:100% 100%;
+    border:none;
+    transition: 0.7s;
+}
+#wrench_icon:hover{
+    width:65px;
+    height:65px;
+    margin-top:3px;
+    left:560px;
+    border:2px solid white;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+#wrench_icon:focus{
+    outline:none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+#scalpel_icon{
+    width:70px;
+    height:70px;
+    position: absolute;
+    right:525px;
+    visibility: hidden;
+    background-image: url("lockpick.jpg");
+    background-size: 100% 100%;
+    border:none;
+    transition: 0.7s;
+}
+#scalpel_icon:hover{
+    width:65px;
+    height:65px;
+    border:2px solid white;
+    right:529px;
+    margin-top:3px;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+#scalpel_icon:focus{
+    outline:none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+#picture1{
+    width:70px;
+    height:70px;
+    position: absolute;
+    left:699px;
+    visibility: hidden;
+    background-image: url("pic_icon.png");
+    background-size:100% 100%;
+    transition: 0.5s;
+    border:none;
+}
+#picture1:hover{
+    width: 65px;
+    height: 65px;
+    left: 701px;
+    margin-top:3px;
+    border: 2px solid white;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+#picture1:focus{
+    outline: none;
+    cursor:url("hammer.cur") 40 40, pointer;
+}
+
+
+#safe_code{
+    width:50px;
+    height:30px;
+    padding:5px;
+    position:absolute;
+    left:600px;
+    top:380px;
+    visibility: hidden;
+}
+
+#safe_enter{
+    width:50px;
+    height:20px;
+    position:absolute;
+    left:600px;
+    top:400px;
+    visibility: hidden;
+}
+
+#screw_pick{
+    width: 230px;
+    height:210px; 
+    position:absolute;
+    left:450px; 
+    top:375px;
+    visibility: hidden;
+    background-image: url("get_screw.png");
+    background-size: 100% 100%;
+    border:none;
+    transition:0.5s;
+    opacity: 0;
+    z-index: 3;
+}
+#get_driver{
+    position:absolute;
+    left:450px;
+    top:375px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+#body{
+    background-color:rgb(255, 244, 227);
+    border:1px solid brown;
+}
+
+#title{
+    color:rgb(243, 192, 115);
+    font-family: Candara;
+    text-align:center;
+    margin-top:20px;
+    font-size:40px;
+}
+
+#line{
+    color: rgb(243, 192 115);
+    width:70%;
+    text-align:center;
+    margin-top:30px;
+}
+
+#line1{
+    color: rgb(243, 192 115);
+    width:70%;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+#synopsis{
+    text-align:center;
+    color: rgb(235, 156, 38);
+    font-size:15px;
+    font-family: Helvetica;
+
+}
+
+#container_p{
+    background-color: transparent;
+    border:1px solid rgb(151, 151, 245);
+    width:700px;
+    height:80px;
+    margin:30px;
+    margin-left:250px;
+    padding:10px;
+    padding-left: 15px;
+    padding-right:15px;
+}
+
+#solutions{
+    width:65px;
+    height:65px;
+    border-radius: 50%;
+    background-image:url("solutionsimg.png");
+    background-size: 100% 100%;
+    margin-left:560px;
+    margin-bottom:30px;
+    border:none;
+    transition:1s;
+}
+
+#solutions:hover{
+    background-image: url("solutionimg.png");
+    cursor:pointer;
+    width:70px;
+    height:70px;
+    margin-left:557px;
+}
+
+#container{
+    background-color: transparent;
+    border:1px solid rgb(151, 151, 245);
+    width:600px;
+    height:50px;
+    margin:30px;
+    margin-left:275px;
+    padding:10px;
+    padding-left: 15px;
+    padding-right:15px;
+    text-align: center;
+}
+
+#game{
+    width:65px;
+    height:65px;
+    border-radius: 50%;
+    border:none;
+    background-image: url("game.png");
+    background-size:100% 100%;
+    margin-left:560px;
+    margin-bottom:30px;
+    transition:background-image 1s, width 1s, height 1s;
+}
+
+#game:hover{
+    width:70px;
+    height:70px;
+    background-image: url("game1.png");
+}
+
+table, th, td{
+    border:2px solid rgb(138, 24, 113);
+    border-collapse:collapse;
+}
+#tables{
+    border: 1px solid green;
+    margin-left:240px;
+    text-align: center;
+    padding:10px;
+    margin-bottom: 30px;
+}
+
+.heads{
+    font-family:Helvetica;
+    color:rgb(224, 146, 255);
+}
+
+.info{
+    font-family:Helvetica;
+    color:rgb(235, 156, 38);
+    margin-left:10px;
+    margin-right:10px;
+}

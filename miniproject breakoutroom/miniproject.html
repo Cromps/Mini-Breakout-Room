@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Breakout Room</title>
+        <link rel = "icon" href = "favicon.png">
+        <link rel = "stylesheet" href = "miniproject.css">
+    </head>
+
+    <body onload = "detectMouse()" id = "body">
+        <hr id = "line">
+        <h2 id = "title"><strong>Can You Escape?</strong></h2>
+        <hr id = "line1">
+        <div id = "container_p">
+            <p id = "synopsis"><strong>You find yourself in a room, alone, and tied up to a chair. Inside are various objects. Look around and inspect your surroundings in the escape room, in an attempt to escape your mysterious predicament, if you can...</strong></p>
+        </div>
+        <div id = "all" >
+            <canvas id = "game_canv"></canvas>
+            <div id = "item_canv">
+                <button id = "scissor_icon" type = "button" onclick = "scissorAction()"></button>
+                <button id = "rope_icon" type = "button" onclick = "ropeAction()"></button>
+                <button id = "screwdriver_icon" type = "button" onclick = "screwAction()"></button>
+                <button id = "wrench_icon" type = "button" onclick = "wrenchAction()"></button>
+                <button id = "scalpel_icon" type = "button" onclick = "scalpelAction()"></button>
+                <button id = "picture1" type = "button" onclick = "picture1Action()"></button>
+            </div>
+            <div id = "textdisplay">
+                <p id = "text"></p>
+            </div>
+            <br>
+            <button id = "cupboard" type = "button" onclick = "cupboard()"></button>
+            <button id = "door" type = "button" onclick = "door()">door</button>
+            <button id = "bed" type = "button" onclick = "bed()">bed</button>
+            <button id = "clock" type = "button" onclick = "clock()">clock</button>
+            <button id = "blackboard" type = "button" onclick = "board()">Blackboard</button>
+            <button id = "window" type = "button" onclick = "windows()">Window</button>
+            <button id = "safe" type = "button" onclick = "safeBox()"></button>
+            <button id = "screw_pick" type = "button" onclick="getScrew()">GetScrew</button>
+            <img src = "get_screw.png" width = "200px" height = "180px" id = "get_driver">
+        </div>
+        
+        <form>
+            <input id = "safe_code" type = "tel" maxlength="4">
+            <button type = "button" id = "safe_enter" onclick = "submitCode()">ENTER</button>
+        </form>
+        
+        <a href = "miniproject2.html">
+            <button type = "button" id = "solutions"></button>
+        </a>
+
+        <script type = "text/javascript" src = "miniproject.js"></script>
+    </body>
+</html>
